@@ -1,0 +1,13 @@
+class GoogleDirectionsService
+
+  private
+
+  def conn
+
+  end
+
+
+
+end
+
+#https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY

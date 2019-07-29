@@ -10,14 +10,22 @@ class MunchiesFacade
     @params[:end]
   end
 
+  def trip_data
+    google_directions_service(@params[:start], @params[:end])
+  end
+
   def arrival_time
     current_time = Time.now.to_i
-    duration_time = google_directions_service(@params[:start], @params[:end]).duration_time
+    duration_time = trip_data.duration_time
     arrival_time = current_time + duration_time
   end
 
+  def restaurants_data
+    yelp_service(end_city, arrival_time, @params[:food])
+  end
+
   def find_restaurants
-    restaurants = yelp_service(end_city, arrival_time, @params[:food]).restaurant_options[:businesses]
+    restaurants = restaurants_data.restaurant_options[:businesses]
   end
 
   def restaurants

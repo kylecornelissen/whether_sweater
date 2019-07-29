@@ -15,7 +15,6 @@ class YelpService
     Faraday.new(url: "https://api.yelp.com/v3/businesses/search") do |f|
       f.adapter Faraday.default_adapter
       f.headers['Authorization'] = "Bearer #{ENV['YELP_API_KEY']}"
-    # end
       f.params[:location] = @location
       f.params[:open_at] = @arrival_time
       f.params[:categories] = @cuisine
@@ -29,19 +28,3 @@ class YelpService
   end
 end
 #https://api.yelp.com/v3/businesses/search?location=pueblo,co&open_at=1564412184&categories=chinese&limit=3
-
-# def get_json(url, params = {})
-#       response = conn.get(url, params)
-#       JSON.parse(response.body, symbolize_names: true)
-# end
-
-# def conn
-#      Faraday.new(url: 'https://api.yelp.com') do |f|
-#          f.adapter Faraday.default_adapter
-#          f.headers['Authorization'] = "Bearer #{ENV['YELP_API_KEY']}
-#      end
-# end
-#
-# def conn
-#     Faraday.new('https://api.yelp.com', headers: {'Authorization' => "Bearer #{ENV['YELP_API_KEY']}"})
-# end

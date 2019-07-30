@@ -24,3 +24,10 @@ Things you may want to cover:
 * ...
 
 * run 'bundle install'
+
+ENDPOINTS:
+
+/api/v1/forecast?location=denver,co
+/api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese
+
+Note: Readme updates in progress

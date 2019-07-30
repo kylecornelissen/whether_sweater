@@ -27,7 +27,7 @@ Things you may want to cover:
 
 ENDPOINTS:
 
-/api/v1/forecast?location=denver,co
+/api/v1/forecast?location=denver,co  
 /api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese
 
 Note: Readme updates in progress

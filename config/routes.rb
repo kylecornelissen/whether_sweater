@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api do
+    namespace :v1 do
+      get 'forecast', to: 'forecast#index'
+      # GET /api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese
+      get 'munchies', to: 'munchies#index'
+    end
+  end
+
+
 end

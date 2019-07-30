@@ -8,7 +8,7 @@ describe DarkskyService do
 
   context "#address_location" do
     it "returns forecast" do
-      VCR.use_cassette("darksky_service") do
+      VCR.use_cassette('services/darksky_service') do
         subject = DarkskyService.new(39.7392358,-104.990251)
         weather_data = subject.weather_data
         expect(weather_data).to be_a Hash

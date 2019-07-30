@@ -3,7 +3,6 @@ class MunchiesFacade
 
   def initialize(params)
     @params = params
-    @id = 42
   end
 
   def end_city
@@ -35,8 +34,6 @@ class MunchiesFacade
   end
 
   private
-
-  attr_reader :params
 
   def google_directions_service(origin, destination)
     GoogleDirectionsService.new(origin, destination)

@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=chinese&limit=3&location=denver,co&open_at=1564412184
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <YELP_API_KEY>
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4998'
+      Ratelimit-Resettime:
+      - '2019-07-31T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 65390b4d10eb7591
+      X-B3-Sampled:
+      - '0'
+      X-Proxied:
+      - 10-69-120-19-uswest2aprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 30 Jul 2019 21:10:25 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-den19623-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "r6DwEwkJdbzp3DnwYKY1qA", "alias": "city-wok-denver-3",
+        "name": "City Wok", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/hReR0RPnZRH1xZ0qzR6ijQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/city-wok-denver-3?adjust_creative=6IQ69FnHUmPOvoU64q9Xgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=6IQ69FnHUmPOvoU64q9Xgw",
+        "review_count": 302, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 2.5, "coordinates": {"latitude": 39.8586550006182, "longitude":
+        -104.673859479453}, "transactions": [], "price": "$$", "location": {"address1":
+        "8900 Pe\u00f1a Blvd", "address2": "", "address3": "Terminal B", "city": "Denver",
+        "zip_code": "80249", "country": "US", "state": "CO", "display_address": ["8900
+        Pe\u00f1a Blvd", "Terminal B", "Denver, CO 80249"]}, "phone": "+13033426746",
+        "display_phone": "(303) 342-6746", "distance": 28785.62259097057}, {"id":
+        "JzpCU7BULZcGnw0dCdLL7Q", "alias": "panda-express-denver-7", "name": "Panda
+        Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/UrInG8j8pJs9lAIwzylNeQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/panda-express-denver-7?adjust_creative=6IQ69FnHUmPOvoU64q9Xgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=6IQ69FnHUmPOvoU64q9Xgw",
+        "review_count": 93, "categories": [{"alias": "hotdogs", "title": "Fast Food"},
+        {"alias": "chinese", "title": "Chinese"}], "rating": 2.5, "coordinates": {"latitude":
+        39.8538680039905, "longitude": -104.673703794702}, "transactions": [], "price":
+        "$", "location": {"address1": "8900 Pena Blvd", "address2": "Terminal A",
+        "address3": "", "city": "Denver", "zip_code": "80249", "country": "US", "state":
+        "CO", "display_address": ["8900 Pena Blvd", "Terminal A", "Denver, CO 80249"]},
+        "phone": "+13033423405", "display_phone": "(303) 342-3405", "distance": 28548.87383560906},
+        {"id": "5ld5_3a0f8Dgye1hyhOHPQ", "alias": "big-bowl-denver-2", "name": "Big
+        Bowl", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/kHScMxFIed7QxZHGCqk-xA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/big-bowl-denver-2?adjust_creative=6IQ69FnHUmPOvoU64q9Xgw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=6IQ69FnHUmPOvoU64q9Xgw",
+        "review_count": 116, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "thai", "title": "Thai"}], "rating": 2.0, "coordinates": {"latitude":
+        39.8630046054658, "longitude": -104.677319303002}, "transactions": [], "price":
+        "$$", "location": {"address1": "8500 Pe\u00f1a Blvd", "address2": "", "address3":
+        "Denver International Airport, Concourse C", "city": "Denver", "zip_code":
+        "80249", "country": "US", "state": "CO", "display_address": ["8500 Pe\u00f1a
+        Blvd", "Denver International Airport, Concourse C", "Denver, CO 80249"]},
+        "phone": "+13033422000", "display_phone": "(303) 342-2000", "distance": 28760.540931964013}],
+        "total": 3, "region": {"center": {"longitude": -104.97024536132812, "latitude":
+        39.73552421220229}}}'
+    http_version: 
+  recorded_at: Tue, 30 Jul 2019 21:10:25 GMT
+recorded_with: VCR 5.0.0

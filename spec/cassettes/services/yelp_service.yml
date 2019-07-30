@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer UkttMR0H7X2gtGmh6tfEbFo_sVfpB1B4VrkjdxPy2Fiu91R8LkJjL0tV8MGRRZZ6n2IEn3WQF3_8f2GTaMIy4rL2_jR_lSakhMhJnUjqJCQXGNjEvHcENzdYoGk-XXYx
+      - Bearer <YELP_API_KEY>
       User-Agent:
       - Faraday v0.15.4
       Accept-Encoding:
@@ -27,21 +27,21 @@ http_interactions:
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4999'
+      - '4998'
       Ratelimit-Resettime:
       - '2019-07-31T00:00:00+00:00'
       X-Zipkin-Id:
-      - dffd0f1379e6fe6d
+      - 65390b4d10eb7591
       X-B3-Sampled:
       - '0'
       X-Proxied:
-      - 10-69-109-59-uswest2aprod
+      - 10-69-120-19-uswest2aprod
       Transfer-Encoding:
       - chunked
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 30 Jul 2019 20:25:57 GMT
+      - Tue, 30 Jul 2019 21:10:25 GMT
       Via:
       - 1.1 varnish
       Connection:
@@ -88,5 +88,5 @@ http_interactions:
         "total": 3, "region": {"center": {"longitude": -104.97024536132812, "latitude":
         39.73552421220229}}}'
     http_version: 
-  recorded_at: Tue, 30 Jul 2019 20:25:57 GMT
+  recorded_at: Tue, 30 Jul 2019 21:10:25 GMT
 recorded_with: VCR 5.0.0

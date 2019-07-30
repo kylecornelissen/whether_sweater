@@ -3,54 +3,33 @@ class WeatherFacade
 
   def initialize(params)
     @params = params
-    @id = 43
   end
 
   def location_info
-    google_geo_service(@params[:location])
+    Location.new(google_geo_service(@params[:location]).location_address)
   end
 
   def weather_info
-    latitude = location_info.location_coordinates[:lat]
-    longitude = location_info.location_coordinates[:lng]
+    location = google_geo_service(@params[:location])
+    latitude = location.location_coordinates[:lat]
+    longitude = location.location_coordinates[:lng]
     darksky_service(latitude, longitude).weather_data
   end
 
   def current_weather
-    { 'current temp' => weather_info[:current][:temperature],
-      'today high' => weather_info[:daily][:data].first[:temperatureHigh],
-      'today low' => weather_info[:daily][:data].first[:temperatureLow],
-      'city' => location_info.location_address[:city],
-      'state' => location_info.location_address[:state],
-      'country' => location_info.location_address[:country],
-      'current time date' => weather_info[:current][:time]
-    }
-  end
-
-  def current_details
-    { 'summary' => weather_info[:current][:summary],
-      'summary_icon' => weather_info[:current][:icon],
-      'feels like' => weather_info[:current][:apparentTemperature],
-      'humidity' => weather_info[:current][:humidity],
-      'visibility' => weather_info[:current][:visibility],
-      'uv index' => weather_info[:current][:uvIndex],
-      'today' => weather_info[:hourly][:summary]
-    }
+    CurrentWeather.new(weather_info[:current])
   end
 
   def hourly_weather
-    # 
-    {
-    }
+    # gives upcoming 8 hours
+    HourlyWeather.new(weather_info[:hourly])
   end
 
   def daily_weather
-
+    DailyWeather.new(weather_info[:daily][:data])
   end
 
   private
-
-  attr_reader :params
 
   def google_geo_service(location)
     GoogleGeoService.new(location)

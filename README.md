@@ -25,10 +25,16 @@ Things you may want to cover:
 
 * run 'bundle install'
 
-ENDPOINTS:
-
+LOCATION FORECAST ENDPOINT:  
 /api/v1/forecast?location=denver,co  
-/api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese
-/api/v1/users?email=[EMAIL ADDRESS]&password=[PASSWORD]&password_confirmation=[PASSWORD]
+
+FIND OPEN RESTAURANT AFTER TRAVELING ENDPOINT:  
+/api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese  
+
+USER ACCOUNT CREATION ENDPOINT:  
+/api/v1/users?email=[EMAIL ADDRESS]&password=[PASSWORD]&password_confirmation=[PASSWORD]  
+
+USER LOGIN ENDPOINT:  
+/api/v1/sessions?email=[EMAIL ADDRESS]&password=[PASSWORD]  
 
 Note: Readme updates in progress

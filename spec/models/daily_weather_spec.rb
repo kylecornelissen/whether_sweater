@@ -9,8 +9,8 @@ RSpec.describe DailyWeather, type: :model do
   end
 
   it 'initializes' do
-    expect(@daily_weather.today_temperatureHigh).to eq(95.21)
-    expect(@daily_weather.today_temperatureLow).to eq(68.15)
+    expect(@daily_weather.today_temperatureHigh).to eq(92.36)
+    expect(@daily_weather.today_temperatureLow).to eq(68.16)
   end
 
   it '#weekly_forecast' do
@@ -19,8 +19,8 @@ RSpec.describe DailyWeather, type: :model do
     expect(weekly_forecast.count).to eq(5)
     expect(weekly_forecast.first[:time]).to eq(1564466400)
     expect(weekly_forecast.first[:icon]).to eq("fog")
-    expect(weekly_forecast.first[:precipitation_chance]).to eq(0.06)
-    expect(weekly_forecast.first[:highTemp]).to eq(95.21)
-    expect(weekly_forecast.first[:lowTemp]).to eq(68.15)
+    expect(weekly_forecast.first[:precipitation_chance]).to eq(0.08)
+    expect(weekly_forecast.first[:highTemp]).to eq(92.36)
+    expect(weekly_forecast.first[:lowTemp]).to eq(68.16)
   end
 end

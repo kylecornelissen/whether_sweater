@@ -16,8 +16,8 @@ RSpec.describe HourlyWeather, type: :model do
     hourly_forecast = @hourly_weather.hourly_forecast(@weather_data[:hourly][:data])
 
     expect(hourly_forecast.count).to eq(8)
-    expect(hourly_forecast.first[:time]).to eq(1564513200)
-    expect(hourly_forecast.first[:temp]).to eq(90.59)
+    expect(hourly_forecast.first[:time]).to eq(1564520400)
+    expect(hourly_forecast.first[:temp]).to eq(90.35)
     expect(hourly_forecast.first[:icon]).to eq("partly-cloudy-day")
   end
 end

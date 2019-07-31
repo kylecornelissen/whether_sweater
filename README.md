@@ -15,7 +15,7 @@ USER ACCOUNT CREATION ENDPOINT:
 USER LOGIN ENDPOINT:  
 /api/v1/sessions?email=[EMAIL ADDRESS]&password=[PASSWORD] 
 
-ROAD TRIP ENDPOINT:
-/api/v1/road_trip?origin=[ADDRESS]&destination=[ADDRESS]&api_key=[API_KEY]
+ROAD TRIP ENDPOINT:  
+/api/v1/road_trip?origin=[ADDRESS]&destination=[ADDRESS]&api_key=[API_KEY]  
 
 Note: Readme updates in progress

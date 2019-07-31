@@ -9,13 +9,13 @@ RSpec.describe CurrentWeather, type: :model do
   end
 
   it 'initializes' do
-    expect(@current_weather.temperature).to eq(90.5)
-    expect(@current_weather.time).to eq(1564514173)
-    expect(@current_weather.summary).to eq("Mostly Cloudy")
-    expect(@current_weather.summary_icon).to eq("partly-cloudy-day")
-    expect(@current_weather.feels_like).to eq(90.5)
+    expect(@current_weather.temperature).to eq(90.23)
+    expect(@current_weather.time).to eq(1564521021)
+    expect(@current_weather.summary).to eq("Foggy")
+    expect(@current_weather.summary_icon).to eq("fog")
+    expect(@current_weather.feels_like).to eq(90.23)
     expect(@current_weather.humidity).to eq(0.22)
-    expect(@current_weather.visibility).to eq(2.933)
+    expect(@current_weather.visibility).to eq(1.139)
     expect(@current_weather.uv_index).to eq("6 (high)")
   end
 

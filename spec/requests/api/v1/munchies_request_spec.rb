@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 describe "Yelp API" do
+  before :each do
+    allow(Time).to receive(:now).and_return(Time.at(1564423200))
+  end
+
   it "gets start and end directions with food type and gives restaurants that are open" do
-    VCR.use_cassette('services/google_directions_service2') do
-      VCR.use_cassette('services/yelp_service2') do
-        get '/api/v1/munchies?start=denver,co&end=pueblo,co&food=breakfast'
-      end
-    end
+    VCR.use_cassette('services/yelp_service2') do
+      get '/api/v1/munchies?start=denver,co&end=pueblo,co&food=breakfast'
+
 
       expect(response).to be_successful
       munchies = JSON.parse(response.body)["data"]["attributes"]
@@ -21,5 +23,6 @@ describe "Yelp API" do
       expect(munchies["restaurants"].first["The Hanging Tree Cafe"]).to have_key("zip_code")
       expect(munchies["restaurants"].first["The Hanging Tree Cafe"]).to have_key("country")
       expect(munchies["restaurants"].first["The Hanging Tree Cafe"]).to have_key("state")
+    end
   end
 end

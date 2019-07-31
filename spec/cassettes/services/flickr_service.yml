@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest?api_key=<FLICKR_API_KEY>&format=json&is_getty=true&method=flickr.photos.search&nojsoncallback=1&safe_search=1&sort=interestingness-desc&tag_mode=all&tags=snow,%20denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '614'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 31 Jul 2019 04:09:18 GMT
+      Server:
+      - Apache/2.4.39 (Ubuntu)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 3ec85dbaae49079b372b8a392a12e9bc.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - ZsWKNcCzisFiYbWRXu1L_hY14VMt-pR7IQ7o91t8LfikuuUOtDHinA==
+    body:
+      encoding: UTF-8
+      string: '{"photos":{"page":1,"pages":1,"perpage":100,"total":"3","photo":[{"id":"7612736864","owner":"33198406@N07","secret":"896fba0b08","server":"8148","farm":9,"title":"Denver
+        Skyline Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5416468718","owner":"21207178@N07","secret":"7d0d4db6dc","server":"5258","farm":6,"title":"Please
+        take a Seat under the Old Tree","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5269214208","owner":"21207178@N07","secret":"eb506f503a","server":"5129","farm":6,"title":"Rocky
+        Mountain Winter Reflection in Spring - Boulder, USA","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 04:09:19 GMT
+recorded_with: VCR 5.0.0

@@ -6,8 +6,8 @@ describe GoogleDirectionsService do
     expect(subject).to be_a GoogleDirectionsService
   end
 
-  context "#restaurant_options" do
-    xit "returns three restaurants that meet criteria" do
+  context "#duration_time" do
+    xit "returns duration time of trip" do
       VCR.use_cassette('services/google_directions_service') do
         subject = GoogleDirectionsService.new("denver,co", "pueblo,co")
         duration_time = subject.duration_time

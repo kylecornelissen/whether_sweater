@@ -16,6 +16,7 @@ VCR.configure do |config|
   config.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
   config.filter_sensitive_data('<DARKSKY_SECRET_KEY>') { ENV['DARKSKY_SECRET_KEY'] }
   config.filter_sensitive_data('<YELP_API_KEY>') { ENV['YELP_API_KEY'] }
+  config.filter_sensitive_data('<FLICKR_API_KEY>') { ENV['FLICKR_API_KEY'] }
 end
 
 begin

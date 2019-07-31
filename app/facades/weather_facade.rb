@@ -29,6 +29,11 @@ class WeatherFacade
     DailyWeather.new(weather_info[:daily][:data])
   end
 
+  def background_image
+    fs = flickr_service(@params[:location], weather_info[:current][:summary])
+    fs.find_weather_background
+  end
+
   private
 
   def google_geo_service(location)
@@ -37,5 +42,9 @@ class WeatherFacade
 
   def darksky_service(latitude, longitude)
     DarkskyService.new(latitude, longitude)
+  end
+
+  def flickr_service(location, weather)
+    FlickrService.new(location, weather)
   end
 end

@@ -29,5 +29,6 @@ ENDPOINTS:
 
 /api/v1/forecast?location=denver,co  
 /api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese
+/api/v1/users?email=whatever@example.com&password=password&password_confirmation=password
 
 Note: Readme updates in progress

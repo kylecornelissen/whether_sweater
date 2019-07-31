@@ -9,7 +9,8 @@ class GoogleGeoService
 
   def location_address
     address_components = fetch_data[:results].first[:address_components]
-    { city: address_components.first[:long_name],
+    {
+      city: address_components.first[:long_name],
       state: address_components[2][:short_name],
       country: address_components[3][:long_name]
     }

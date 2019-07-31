@@ -21,7 +21,18 @@ describe GoogleGeoService do
   end
 
   context "#location_address" do
-    xit "returns latitude and longitude" do
+    it "returns latitude and longitude" do
+      VCR.use_cassette('services/google_geo_service') do
+        subject = GoogleGeoService.new("denver,co")
+        location_address = subject.location_address
+        expect(location_address).to be_a Hash
+        expect(location_address).to have_key :city
+        expect(location_address).to have_key :state
+        expect(location_address).to have_key :country
+        expect(location_address[:city]).to be_a String
+        expect(location_address[:state]).to be_a String
+        expect(location_address[:country]).to be_a String
+      end
     end
   end
 end

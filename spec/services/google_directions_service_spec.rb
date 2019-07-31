@@ -7,7 +7,7 @@ describe GoogleDirectionsService do
   end
 
   context "#duration_time" do
-    xit "returns duration time of trip" do
+    it "returns duration time of trip" do
       VCR.use_cassette('services/google_directions_service') do
         subject = GoogleDirectionsService.new("denver,co", "pueblo,co")
         duration_time = subject.duration_time

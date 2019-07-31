@@ -1,29 +1,7 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 * run 'bundle install'
+
+PRODUCTION LINK:
+https://sweater-n-weather.herokuapp.com
 
 LOCATION FORECAST ENDPOINT:  
 /api/v1/forecast?location=denver,co  
@@ -35,6 +13,9 @@ USER ACCOUNT CREATION ENDPOINT:
 /api/v1/users?email=[EMAIL ADDRESS]&password=[PASSWORD]&password_confirmation=[PASSWORD]  
 
 USER LOGIN ENDPOINT:  
-/api/v1/sessions?email=[EMAIL ADDRESS]&password=[PASSWORD]  
+/api/v1/sessions?email=[EMAIL ADDRESS]&password=[PASSWORD] 
+
+ROAD TRIP ENDPOINT:
+/api/v1/road_trip?origin=[ADDRESS]&destination=[ADDRESS]&api_key=[API_KEY]
 
 Note: Readme updates in progress
